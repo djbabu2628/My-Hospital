@@ -8,26 +8,30 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100%;
+    height: 100vh;
     background-color: lightgray;
 }
 
+.logIn-container > * {
+    padding:2rem;
+}
+
 .logIn-container {
-    height: 35vh;
+    height: 50vh;
     width: 40vh;
     background-color:lightsteelblue;
-    padding:1rem;
+    /* padding:0 3rem 0 2rem; */
     border-radius: 3rem;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: center;
 }
 
 .signUp-container{
-    height: 45vh;
+    height: 55vh;
     width: 40vh;
     background-color:lightsteelblue;
-    padding:1rem;
+    padding:0 3rem 0 2rem;  
     border-radius: 3rem;
     display: flex;
     flex-direction: column;
@@ -62,11 +66,18 @@ form input {
     border-radius: 0.5rem;
 }
 
-.In{
-    text-align: center;
-}
-
 .btn{
     width: 100%;
     text-align: center;
 }
+
+.In p{
+    font-size: large;
+    padding:1rem;
+    cursor: pointer;
+}
+
+form h2{
+    text-align: center;
+}
+

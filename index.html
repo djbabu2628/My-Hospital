@@ -9,35 +9,38 @@
 </head>
 
 <body>
-    <form>
+    <form id="log">
         <div class="logIn-container">
-            <h2>Log In</h2>
-            <p>Enter Email/Mobile no.</p>
-            <input id="I-username" class="user" />
-            <p>Password</p>
-            <input id="I-pass" class="user" />
-            <div class="In"><a>Sign Up</a></div>
-            <div class="btn"><button id="log-btn" class="ind-btn">Log-In</button></div>
+            <div class="log-padd">
+                <h2>Log In</h2>
+                <p>Enter Email/Mobile no.</p>
+                <input id="I-username" class="user" />
+                <p>Password</p>
+                <input id="I-pass" class="user" />
+                <div class="In"><p onclick="xpage()">Sign Up/Create account</p></div>
+                <div class="btn"><button id="log-btn" class="ind-btn">Log-In</button></div>
+            </div>
         </div>
     </form>
-    <form>
+    <form id="sign" hidden>
         <div class="signUp-container">
                 <h2>Sign-Up</h2>
-                <p>Enter Name:</p>
-                <input id="name" class="user" type="text">
-                <p>Enter age:</p>
-                <input id="age" class="user" type="text" />
-                <p>Enter blood Group</p>
-                <input id="blood" class="user" type="text" />
-                <p>Enter Mobile No.:</p>
-                <input type="text" id="mob" class="user">
-                <p>Enter Email Id:</p>
-                <input type="text" id="email" class="user">
-                <p>Enter Permanent-Address</p>
-                <input type="text" id="address" class="user">
-                <div class="In"><a>Log In</a></div>
+                <!-- <p>Enter Name:</p> -->
+                <input id="name" class="user" type="text" placeholder="Enter Name">
+                <!-- <p>Enter age:</p> -->
+                <input id="number" class="user" type="text" placeholder="Age"/>
+                <!-- <p>Enter blood Group</p> -->
+                <input id="blood" class="user" type="text" placeholder="Blood Group"/>
+                <!-- <p>Enter Mobile No.:</p> -->
+                <input type="number" id="mob" class="user" placeholder="Enter Moble No.:">
+                <!-- <p>Enter Email Id:</p> -->
+                <input type="email" id="email" class="user" placeholder="Enter Email ID:">
+                <!-- <p>Enter Permanent-Address</p> -->
+                <input type="text" id="address" class="user" placeholder="Enter Pernament-Address:">
+                <div class="In"><p onclick="xpage()">Log In/Sign-In</p></div>
                 <div class="btn"><button id="sign-up" class="ind-btn">Sign-Up</button></div>
         </div>
     </form>
+    <script src="script.js"></script>
 </body>
 </html>
