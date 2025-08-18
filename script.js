@@ -10,23 +10,44 @@ function xpage () {
     }else {
         logForm.setAttribute("hidden",true);
         signForm.removeAttribute("hidden");
-    }
-
-}
-
-
-
-document.getElementById("log-btn").addEventListener("click",()=>{
-    alert("Login Successfully.....");
-})
-
-document.getElementById("sign-btn").addEventListener("click",()=>{
-    alert("Account Create Successfully.....")
-})
-
-let fill = document.querySelector("input");
-    if(!fill.value){
-        alert("Please fill details");
-        (!fill.value).focus();
         
     }
+
+};
+
+function log(){
+document.getElementById("log").addEventListener("submit",function(e){
+    e.preventDefault();
+    const inputs = this.querySelectorAll("input[required]");
+
+    for(let input of inputs){
+        if (!input.value){
+            alert(`Please fill ${input.name}`);
+            input.focus();
+            return;
+        }
+    }
+    alert("Log-In Successfully.......");
+
+});
+};
+
+function sign(){
+document.getElementById("sign").addEventListener("submit",function(e){
+    e.preventDefault();
+    const inputs = this.querySelectorAll("input[required]");
+
+    for(let input of inputs){
+        if (!input.value){
+            alert(`Please fill ${input.name}`);
+            input.focus();
+            return;
+        }
+    }
+alert("Account Create Successfully.......");
+
+});
+};
+
+log();
+sign();
