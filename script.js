@@ -55,3 +55,4 @@ sign();
 
 let email = document.getElementById("I-username");
 email.type = "email";
+email.setAttribute("required");
