@@ -51,3 +51,7 @@ alert("Account Create Successfully.......");
 
 log();
 sign();
+
+
+let email = document.getElementById("I-username");
+email.type = "email";
