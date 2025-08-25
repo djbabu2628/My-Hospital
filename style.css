@@ -86,7 +86,7 @@ form input {
 }
 
 .inlabel input:focus + label,
-.inlabel input:valid + label {
+.inlabel input:not(:placeholder-shown) + label {
     top: -10px;
     font-size:0.8rem;
     color:#9AA6B2;
