@@ -24,7 +24,10 @@
                     <label for="I-pass" class="label" >Password</label>
                 </div>
                 <div class="In"><p onclick="xpage()">Sign Up/Create account</p></div>
-                <div class="btn"><button id="log-btn" class="ind-btn" >Log-In</button></div>
+                <div class="btn">
+                    <button id="log-btn" class="ind-btn" type="submit">Log-In</button>
+                    <div id="logpop" class="popup"></div>
+                </div>
             </div>
         </div>
     </form>
@@ -62,8 +65,11 @@
                     <label for="address" class="label">Address</label>
                 </div>
                     <div class="In"><p onclick="xpage()">Log In/Sign-In</p></div>
-                    <div class="btn"><button id="sign-btn" class="ind-btn">Sign-Up</button></div>
-        </div>
+                    <div class="btn">
+                        <button id="sign-btn" class="ind-btn" type="submit">Sign-Up</button>
+                        <div id="signpop" class="popup"></div>
+                    </div>
+                </div>
     </form>
     <script src="script.js"></script>
 </body>
