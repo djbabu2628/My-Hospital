@@ -15,44 +15,46 @@ function xpage () {
 
 };
 
-function log(){
-document.getElementById("log").addEventListener("submit",function(e){
-    e.preventDefault();
-    const inputs = this.querySelectorAll("input[required]");
+function popup(msg, id) {
+    let pop = document.getElementById(id);
+    pop.innerText = msg;
+    pop.style.display = "block";
+    setTimeout(()=>{
+        pop.style.display = "none";
+    },3000);
+};
 
-    for(let input of inputs){
-        if (!input.value){
+document.getElementById("log").addEventListener("submit",function(event){
+    event.preventDefault();
+
+    const inputs = this.querySelectorAll("input[required]");
+    for (let input of inputs){
+        if(!input.value){
             alert(`Please fill ${input.name}`);
             input.focus();
             return;
         }
     }
-    alert("Log-In Successfully.......");
+    popup("Log-In Successfully........","logpop");
+    setTimeout(()=>{
+        window.location.href = "home.html";
+    },1500);
+})
 
-});
-};
+document.getElementById("sign").addEventListener("submit",function(event){
+    event.preventDefault();
 
-function sign(){
-document.getElementById("sign").addEventListener("submit",function(e){
-    e.preventDefault();
     const inputs = this.querySelectorAll("input[required]");
-
-    for(let input of inputs){
-        if (!input.value){
+    for (let input of inputs){
+        if(!input.value){
             alert(`Please fill ${input.name}`);
             input.focus();
             return;
         }
     }
-alert("Account Create Successfully.......");
 
-});
-};
-
-log();
-sign();
-
-
-let email = document.getElementById("I-username");
-email.setAttribute("required");
-email.type = "email";
+    popup("Sign-In Successfully........","signpop");
+    setTimeout(()=>{
+        window.location.href = "home.html";
+    },1500);
+})
